@@ -8,6 +8,11 @@
 
   <target name="clean">
 	<delete dir="${dir.output}"/>
+    <delete dir="app/vendor"/>
+  </target>
+
+  <target name="vendor">
+    <exec command="cd app && composer install"/>
   </target>
 
   <target name="phpdepend">

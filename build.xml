@@ -65,7 +65,7 @@
   </target>
 
   <target name="selenium">
-    <exec command="${php.exec} app/test-php.php"/>
+    <exec command="php app/test-php.php"/>
   </target>
 
   <target name="phpmd">

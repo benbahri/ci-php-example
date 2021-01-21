@@ -12,7 +12,8 @@
   </target>
 
   <target name="vendor">
-    <exec command="cd app && composer install"/>
+    <exec command="cd app"/>
+    <exec command="composer install"/>
   </target>
 
   <target name="phpdepend">
@@ -256,7 +257,7 @@
   </target>
 
   <target name="all" depends="clean, prepare, package, report"/>
-  <target name="build" depends="prepare, test"/>
+  <target name="build" depends="prepare, vendor, test"/>
   <target name="test" depends="prepare, phpunit, selenium"/>
   <target name="report" depends="build, phploc, phpdoc, phpdepend, phpcs, phpmd, phpcpd"/>
 </project>

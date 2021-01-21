@@ -13,7 +13,10 @@
 
   <target name="vendor">
     <exec command="cd app"/>
-    <exec command="composer install"/>
+    <exec 
+        command="composer install"
+        passthru="true"
+    />
   </target>
 
   <target name="phpdepend">
@@ -71,7 +74,10 @@
   </target>
 
   <target name="selenium">
-    <exec command="php app/test-php.php"/>
+    <exec 
+        command="php app/test-php.php"
+        passthru="true"
+    />
   </target>
 
   <target name="phpmd">

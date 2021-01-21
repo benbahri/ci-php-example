@@ -12,9 +12,9 @@
   </target>
 
   <target name="vendor">
-    <exec command="cd app"/>
     <exec 
         command="composer install"
+        dir="app"
         passthru="true"
     />
   </target>

@@ -166,89 +166,56 @@
     <move file="${dir.src}/${peartgz}" tofile="${dir.output}/${peartgz}" overwrite="true"/>
   </target>
 
+
   <target name="install-dependencies">
-  	<exec
-  	  command="${defaultpear.bin} config-create ${dir.vendor} ${dir.vendor}/.pearrc"
-      passthru="true"
+    <exec
+      command="wget -O phive.phar https://phar.io/releases/phive.phar"
     />
     <exec
-      command="${defaultpear.exec} config-set php_bin ${php.bin}"
-      passthru="true"
+      command="wget -O phive.phar.asc https://phar.io/releases/phive.phar.asc"
     />
     <exec
-      command="${defaultpear.exec} config-set php_dir ${dir.vendor}/php"
-      passthru="true"
+      command="gpg --keyserver pool.sks-keyservers.net --recv-keys 0x9D8A98B29B2D5D79"
     />
     <exec
-      command="${defaultpear.exec} config-set bin_dir ${dir.vendor}/bin"
-      passthru="true"
+      command="gpg --verify phive.phar.asc phive.phar"
     />
     <exec
-      command="${defaultpear.exec} config-set cache_dir ${dir.vendor}/cache"
-      passthru="true"
+      command="chmod +x phive.phar"
     />
     <exec
-      command="${defaultpear.exec} config-set cfg_dir ${dir.vendor}/cfg"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set data_dir ${dir.vendor}/data"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set download_dir ${dir.vendor}/download"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set temp_dir ${dir.vendor}/tmp"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set doc_dir ${dir.vendor}/doc"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set test_dir ${dir.vendor}/test"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set www_dir ${dir.vendor}/www"
-      passthru="true"
-    />
-    <exec
-      command="${defaultpear.exec} config-set auto_discover 1"
-      passthru="true"
+      command="mv phive.phar /usr/local/bin/phive"
     />
   	<exec
-      command="${defaultpear.exec} install --alldeps pear.phpunit.de/PHPUnit"
+      command="phive install phpunit"
       passthru="true"
     />
     <exec
-      command="${defaultpear.exec} install --alldeps phpunit/phploc"
+      command="phive install phpunit/phploc"
       passthru="true"
     />
     <exec
-      command="${defaultpear.exec} install --alldeps pear.docblox-project.org/DocBlox"
+      command="phive install --alldeps pear.docblox-project.org/DocBlox"
       passthru="true"
     />
     <exec
-      command="${defaultpear.exec} install --alldeps pear.pdepend.org/PHP_Depend-beta"
+      command="phive install --alldeps pear.pdepend.org/PHP_Depend-beta"
       passthru="true"
     />
     <exec
-      command="${defaultpear.exec} install --alldeps pear.phpmd.org/PHP_PMD"
+      command="phive install --alldeps pear.phpmd.org/PHP_PMD"
       passthru="true"
     />
     <exec
-      command="${defaultpear.exec} install --alldeps pear.phpunit.de/phpcpd"
+      command="phive install --alldeps pear.phpunit.de/phpcpd"
       passthru="true"
     />
     <exec
-      command="${defaultpear.exec} install --alldeps PHP_CodeSniffer"
+      command="phive install --alldeps PHP_CodeSniffer"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps pear.phing.info/phing"
+      command="phive install --alldeps pear.phing.info/phing"
       passthru="true"
     />
   </target>

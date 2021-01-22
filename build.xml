@@ -167,7 +167,6 @@
   </target>
 
   <target name="install-dependencies">
-  	<mkdir dir="${dir.vendor}"/>
   	<exec
   	  command="${defaultpear.bin} config-create ${dir.vendor} ${dir.vendor}/.pearrc"
       passthru="true"
@@ -221,35 +220,31 @@
       passthru="true"
     />
   	<exec
-  	  command="${defaultpear.exec} install pear"
-  	  passthru="true"
-  	/>
-  	<exec
-      command="${pear.exec} install --alldeps pear.phpunit.de/PHPUnit"
+      command="${defaultpear.exec} install --alldeps pear.phpunit.de/PHPUnit"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps phpunit/phploc"
+      command="${defaultpear.exec} install --alldeps phpunit/phploc"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps pear.docblox-project.org/DocBlox"
+      command="${defaultpear.exec} install --alldeps pear.docblox-project.org/DocBlox"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps pear.pdepend.org/PHP_Depend-beta"
+      command="${defaultpear.exec} install --alldeps pear.pdepend.org/PHP_Depend-beta"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps pear.phpmd.org/PHP_PMD"
+      command="${defaultpear.exec} install --alldeps pear.phpmd.org/PHP_PMD"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps pear.phpunit.de/phpcpd"
+      command="${defaultpear.exec} install --alldeps pear.phpunit.de/phpcpd"
       passthru="true"
     />
     <exec
-      command="${pear.exec} install --alldeps PHP_CodeSniffer"
+      command="${defaultpear.exec} install --alldeps PHP_CodeSniffer"
       passthru="true"
     />
     <exec

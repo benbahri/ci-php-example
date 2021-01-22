@@ -47,11 +47,6 @@
       dir="${project.basedir}"
       passthru="true"
     />
-    <xslt
-      file="${phpcs.output.xml.file}"
-      tofile="${phpcs.output.html.file}"
-      style="${phpcs.style}"
-    />
   </target>
 
   <target name="phpunit">
@@ -64,11 +59,6 @@
       command="${phpunit.exec} ${phpunit.args}"
       dir="${project.basedir}/test"
       passthru="true"
-    />
-    <xslt
-      file="${phpunit.output.xml.file}"
-      tofile="${junit.output.xml.file}"
-      style="${junit.style}"
     />
   </target>
 
@@ -90,11 +80,6 @@
       dir="${project.basedir}"
       passthru="true"
     />
-    <xslt
-      file="${phpmd.output.xml.file}"
-      tofile="${phpmd.output.html.file}"
-      style="${phpmd.style}"
-    />
   </target>
 
   <target name="phpcpd">
@@ -107,11 +92,6 @@
       command="${phpcpd.exec} ${phpcpd.args}"
       dir="${project.basedir}"
       passthru="true"
-    />
-    <xslt
-      file="${phpcpd.output.xml.file}"
-      tofile="${phpcpd.output.html.file}"
-      style="${phpcpd.style}"
     />
   </target>
 

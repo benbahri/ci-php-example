@@ -125,7 +125,7 @@
   <target name="_package">
     <mkdir dir="${package.output.dir}"/>
     <exec
-      command="${pear.exec} channel-discover ${pear.channel}"
+      command="${defaultpear.exec} channel-discover ${pear.channel}"
       dir="${project.basedir}" passthru="true"
     />
     <exec

@@ -191,31 +191,27 @@
       passthru="true"
     />
     <exec
-      command="phive install phpunit/phploc"
+      command="phive install phploc"
+      passthru="true"
+    />
+    <!--exec
+      command="phive install pear.docblox-project.org/DocBlox"
+      passthru="true"
+    /-->
+    <exec
+      command="composer require pdepend/pdepend"
       passthru="true"
     />
     <exec
-      command="phive install --alldeps pear.docblox-project.org/DocBlox"
+      command="composer require phpmd/phpmd"
       passthru="true"
     />
     <exec
-      command="phive install --alldeps pear.pdepend.org/PHP_Depend-beta"
+      command="phive install phpcpd"
       passthru="true"
     />
     <exec
-      command="phive install --alldeps pear.phpmd.org/PHP_PMD"
-      passthru="true"
-    />
-    <exec
-      command="phive install --alldeps pear.phpunit.de/phpcpd"
-      passthru="true"
-    />
-    <exec
-      command="phive install --alldeps PHP_CodeSniffer"
-      passthru="true"
-    />
-    <exec
-      command="phive install --alldeps pear.phing.info/phing"
+      command="composer require squizlabs/php_codesniffer"
       passthru="true"
     />
   </target>

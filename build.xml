@@ -37,7 +37,7 @@
   </target>
 
   <target name="phpcs">
-    <exec command="${phing} _phpcs -debug" passthru="true"/>
+    <exec command="${phing} _phpcs" passthru="true"/>
   </target>
   <target name="_phpcs">
     <mkdir dir="${phpcs.output.xml.dir}"/>
@@ -70,7 +70,7 @@
   </target>
 
   <target name="phpmd">
-    <exec command="${phing} _phpmd -debug" passthru="true"/>
+    <exec command="${phing} _phpmd" passthru="true"/>
   </target>
   <target name="_phpmd">
     <mkdir dir="${phpmd.output.xml.dir}"/>

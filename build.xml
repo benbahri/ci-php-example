@@ -210,7 +210,11 @@
       passthru="true"
     />
     <exec
-      command="composer require squizlabs/php_codesniffer"
+      command="phive install phpcs"
+      passthru="true"
+    />
+    <exec
+      command="phive install phpcbf"
       passthru="true"
     />
   </target>

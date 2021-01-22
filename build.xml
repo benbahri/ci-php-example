@@ -27,7 +27,6 @@
     <mkdir dir="${phpdepend.output.html.dir}"/>
     <exec
       command="${phpdepend.exec} ${phpdepend.args}"
-      dir="${project.basedir}"
       passthru="true"
     />
     <!--xslt

@@ -166,7 +166,7 @@
       command="mv phive.phar /usr/local/bin/phive"
     />
   	<exec
-      command="phive install phpunit"
+      command="phive install --force-accept-unsigned phpunit"
       passthru="true"
     />
     <exec
@@ -186,7 +186,7 @@
       passthru="true"
     />
     <exec
-      command="phive install phpcpd"
+      command="phive install --force-accept-unsigned phpcpd"
       passthru="true"
     />
     <exec

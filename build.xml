@@ -30,11 +30,11 @@
       dir="${project.basedir}"
       passthru="true"
     />
-    <xslt
+    <!--xslt
       file="${phpdepend.output.xml.file}"
       tofile="${phpdepend.output.html.file}"
       style="${phpdepend.style}"
-    />
+    /-->
   </target>
 
   <target name="phpcs">
